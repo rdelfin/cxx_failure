@@ -1,0 +1,61 @@
+"""
+@generated
+cargo-raze generated Bazel file.
+
+DO NOT EDIT! Replaced on runs of cargo-raze
+"""
+
+package(default_visibility = ["//visibility:public"])
+
+licenses([
+    "notice",  # See individual crates for specific licenses
+])
+
+# Aliased targets
+alias(
+    name = "anyhow",
+    actual = "@raze__anyhow__1_0_38//:anyhow",
+    tags = [
+        "cargo-raze",
+        "manual",
+    ],
+)
+
+alias(
+    # Extra aliased target, from raze configuration
+    # N.B.: The exact form of this is subject to change.
+    name = "cargo_bin_cxxbridge",
+    actual = "@raze__cxxbridge_cmd__1_0_32//:cargo_bin_cxxbridge",
+    tags = [
+        "cargo-raze",
+        "manual",
+    ],
+)
+
+alias(
+    name = "cxxbridge_cmd",
+    actual = "@raze__cxxbridge_cmd__1_0_32//:cxxbridge_cmd",
+    tags = [
+        "cargo-raze",
+        "manual",
+    ],
+)
+
+alias(
+    # Extra aliased target, from raze configuration
+    # N.B.: The exact form of this is subject to change.
+    name = "cargo_bin_cxxbridge",
+    actual = "@raze__cxxbridge_cmd__1_0_32//:cargo_bin_cxxbridge",
+    tags = [
+        "cargo-raze",
+        "manual",
+    ],
+)
+
+# Export file for Stardoc support
+exports_files(
+    [
+        "crates.bzl",
+    ],
+    visibility = ["//visibility:public"],
+)
